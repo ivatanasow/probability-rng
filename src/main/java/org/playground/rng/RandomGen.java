@@ -7,10 +7,10 @@ import java.util.Random;
 public class RandomGen {
 
     // Values that may be returned by nextNum()
-    private int[] randomNums;
+    private final int[] randomNums;
 
     // Probability of the occurence of randomNums
-    private float[] probabilities;
+    private final float[] probabilities;
 
     private final Random randomGenerator;
 
@@ -37,7 +37,7 @@ public class RandomGen {
             }
         }
 
-        throw new NumberNotFoundException("Cannot determine random number");
+        throw new NumberNotFoundException("Cannot determine number");
     }
 
     private void validate(int[] randomNums, float[] probabilities) {
